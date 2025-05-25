@@ -1,0 +1,192 @@
+/* Responsive Styles */
+
+/* Large Screens (default styles above) */
+
+/* Medium Screens (tablets) */
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-6);
+  }
+  
+  .preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .country-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .article-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: var(--spacing-8);
+  }
+  
+  .timeline-event {
+    width: 42%;
+  }
+}
+
+/* Small Screens (mobile) */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-4);
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: var(--spacing-2) 0;
+  }
+  
+  .hero {
+    padding: var(--spacing-8) 0;
+  }
+  
+  .hero h1 {
+    margin-bottom: var(--spacing-3);
+  }
+  
+  .hero h2 {
+    margin-bottom: var(--spacing-6);
+    font-size: 1.25rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+  
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .article-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-row.header .comparison-cell:first-child {
+    display: none;
+  }
+  
+  .comparison-cell {
+    padding: var(--spacing-2);
+  }
+  
+  .comparison-cell:first-child {
+    font-weight: 700;
+    background-color: var(--bg-alt-color);
+  }
+  
+  .conclusion-points {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Timeline for mobile */
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-event {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+  }
+  
+  .timeline-event.israel,
+  .timeline-event.rdc {
+    left: 0;
+  }
+  
+  .timeline-event.israel::after,
+  .timeline-event.rdc::after {
+    left: -36px;
+    right: auto;
+  }
+  
+  .timeline-header {
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  /* Navigation buttons */
+  .navigation-buttons .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 480px) {
+  section {
+    padding: var(--spacing-8) 0;
+  }
+  
+  .page-header {
+    padding: var(--spacing-6) 0;
+  }
+  
+  .country-data {
+    grid-template-columns: 1fr;
+  }
+  
+  .card,
+  .article-card,
+  .country-card,
+  .analysis-card {
+    padding: var(--spacing-4);
+  }
+  
+  .bar-label {
+    width: 50px;
+  }
+  
+  .bar-value {
+    width: 70px;
+  }
+  
+  .timeline-event {
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+}
